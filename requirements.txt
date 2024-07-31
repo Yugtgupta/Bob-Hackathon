@@ -1,0 +1,4 @@
+langchain
+langchain_hub
+langchain_community
+python-dotenv
