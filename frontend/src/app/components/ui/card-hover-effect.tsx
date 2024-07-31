@@ -6,15 +6,24 @@ import { useState } from "react";
 export const HoverEffect = ({
   items,
   className,
+  onCardClick, // Add this line to accept the callback function
 }: {
   items: {
-    imgSrc: string;  // Updated to include an image source URL
+    imgSrc: string;
     title: string;
     description: string;
   }[];
   className?: string;
+  onCardClick?: (index: number) => void; // Define the type for the callback function
 }) => {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+
+  const handleCardClick = (index: number) => {
+    setSelectedIndex(index);
+    if (onCardClick) {
+      onCardClick(index); // Call the callback function with the clicked card index
+    }
+  };
 
   return (
     <div
@@ -27,7 +36,7 @@ export const HoverEffect = ({
         <div
           key={idx}
           className="relative group block p-2 h-full w-full cursor-pointer"
-          onClick={() => setSelectedIndex(idx)}
+          onClick={() => handleCardClick(idx)}
         >
           <AnimatePresence>
             {selectedIndex === idx && (
@@ -64,7 +73,7 @@ export const Card = ({
 }: {
   className?: string;
   children: React.ReactNode;
-  isSelected: boolean;  // Added isSelected prop
+  isSelected: boolean;
 }) => {
   return (
     <div
@@ -84,7 +93,7 @@ export const Card = ({
 export const CardImage = ({
   src,
 }: {
-  src: string;  // Added src prop for image
+  src: string;
 }) => {
   return (
     <div className="flex justify-center items-center mb-4">
