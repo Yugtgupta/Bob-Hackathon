@@ -77,12 +77,11 @@ export function CardPattern({ mouseX, mouseY, randomString }: any) {
           {randomString}
         </p>
       </motion.div>
-    </div>  
+    </div>
   );
 }
 
-const characters =
-  "$$$$";
+const characters = "₹₹₹₹";
 export const generateRandomString = (length: number) => {
   let result = "";
   for (let i = 0; i < length; i++) {
