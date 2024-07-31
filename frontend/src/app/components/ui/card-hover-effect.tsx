@@ -69,7 +69,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 shadow-lg overflow-hidden bg-white border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
+        "rounded-2xl h-full w-full p-4 shadow-md shadow-slate-700 overflow-hidden bg-neutral-100 border border-transparent dark:border-white/[0.2] group-hover:border-orange-800 relative z-20",
         isSelected ? "border-4 border-orange-800" : "border border-transparent",
         className
       )}
@@ -88,7 +88,7 @@ export const CardImage = ({
 }) => {
   return (
     <div className="flex justify-center items-center mb-4">
-      <img src={src} alt="Card Image" className="w-[200px] h-auto object-cover rounded-lg" />
+      <img src={src} alt="Card Image" className="w-[130px] mb-8 h-auto object-cover rounded-lg" />
     </div>
   );
 };
@@ -101,7 +101,7 @@ export const CardTitle = ({
   children: React.ReactNode;
 }) => {
   return (
-    <h4 className={cn("text-black font-bold tracking-wide mt-4", className)}>
+    <h4 className={cn("text-black text-center text-lg font-bold tracking-wide mt-4", className)}>
       {children}
     </h4>
   );
@@ -117,7 +117,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "mt-8 text-black tracking-wide leading-relaxed text-sm",
+        "mt-5 text-black text-center tracking-wide leading-relaxed text-sm",
         className
       )}
     >

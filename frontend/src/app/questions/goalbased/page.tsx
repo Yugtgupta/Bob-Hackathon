@@ -1,40 +1,41 @@
 // pages/index.tsx
 import { HoverEffect } from "@/app/components/ui/card-hover-effect";
 
+
 export default function page() {
   const items = [
     {
-      imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbSBQZ1WYwnaqnBFVhKA6RLs-0MVH8wfWmpA&s",
+      imgSrc: "/childs_education.png",
       title: "Child's education",
       description: "Description for card 1",
     },
     
     {
-      imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbSBQZ1WYwnaqnBFVhKA6RLs-0MVH8wfWmpA&s",
+      imgSrc: "/marriage.png",
       title: "Marriage",
       description: "Description for card 1",
     },
     
     {
-      imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbSBQZ1WYwnaqnBFVhKA6RLs-0MVH8wfWmpA&s",
+      imgSrc: "/travel.png",
       title: "Travel",
       description: "Description for card 1",
     },
     
     {
-      imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbSBQZ1WYwnaqnBFVhKA6RLs-0MVH8wfWmpA&s",
+      imgSrc: "/retirement.png",
       title: "Retirement",
       description: "Description for card 1",
     },
     
     {
-      imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbSBQZ1WYwnaqnBFVhKA6RLs-0MVH8wfWmpA&s",
+      imgSrc: "/house.png",
       title: "House",
       description: "Description for card 1",
     },
     
     {
-      imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbSBQZ1WYwnaqnBFVhKA6RLs-0MVH8wfWmpA&s",
+      imgSrc: "/car.png",
       title: "Car",
       description: "Description for card 1",
     },
@@ -45,9 +46,13 @@ export default function page() {
   return (
     <main className="mx-24">
 
-      <h1 className="text-center mt-8 text-2xl font-bold ">Our Features</h1>
+      <h1 className="text-center mt-10 text-2xl text-shadow-md font-bold ">Select Your Goal:</h1>
       <HoverEffect items={items} className="mb-4" />
-      <div className="h-full"></div>
+      {/* the form */}
+      <div className="h-full">
+
+      </div>
+      
     </main>
   );
 }
